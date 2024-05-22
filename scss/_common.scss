@@ -1,0 +1,613 @@
+@use "config/variables" as v;
+
+
+.flex {
+    @include v.flex;
+}
+
+.min_container {
+    @include v.min;
+}
+.container {
+    min-width: 1020px;
+    margin: 0 auto;
+    width: 71.875%;
+}
+.smallest_container {
+    @include v.min_min;
+}
+br.sp {
+    display: none;
+}
+br.pc {
+    display: block;
+}
+.pc {
+    display: block;
+}
+.sp {
+    display: none;
+}
+.non_image {
+    background-image: url(../images/common/non_image.jpg);
+}
+.flex--start {
+    justify-content: flex-start;
+}
+.transition {
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/*-------------------------
+    header
+-------------------------*/
+.header_include {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    width: 100%;
+}
+#header {
+    width: 100%;
+    .flex {
+        justify-content: space-between;
+
+    }
+    a.logo {
+        width: 12%;
+        min-width: 120px;
+        top: 6rem;
+        left: 8rem;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            width: 26%;
+            min-width: 1px;
+            top: 10px;
+            left: 20px;
+        }
+    }
+    .header__toggle {
+        width: 22.7%;
+        min-width: 210px;
+        @media screen and (max-width: 768px) {
+            .flex {
+                justify-content: flex-end;
+            }
+            
+        }
+        a.header__toggle--contact {
+            @include v.bg;
+            background-image: url(/images/common/header_contact-bg.jpg);
+            width: 60%;
+            padding: 2rem 0;
+            color: #fff;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            max-width: 266px;
+            p {
+                text-align: center;
+                font-size: clamp(20px, 1.273rem + 3.64vw, 40px);
+                font-family: 'brandon';
+                span {
+                    display: block;
+                    font-weight: bold;
+                    font-size: clamp(12px, 1.018rem + 0.91vw, 1.7rem);
+                    font-family:"dnp-shuei-gothic-gin-std";
+                }
+            }
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+        #toggle {
+            background-color: #000;
+            width: 27%;
+            max-width: 120px;
+            cursor: pointer;
+            border-bottom-left-radius: 30px;
+            @media screen and (max-width: 768px) {
+                width: 73px;
+                padding: 25px 0;
+            }
+            div {
+                position: relative;
+                top: 40%;
+                height: 23px;
+                bottom: 0;
+                margin: auto;
+                @media screen and (max-width: 768px) {
+                    top: 4px;
+                    right: -3px;
+                }
+                span {
+                    width: 42%;
+                    background-color: #fff;
+                    display: block;
+                    height: 4px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    &:nth-of-type(1) {
+                        transform: translateY(0px);
+                    }
+                    &:nth-of-type(2) {
+                        transform: translateY(15px);
+                        @media screen and (max-width: 768px) {
+                            transform: translateY(11px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-------------------------
+    gnav
+-------------------------*/
+#gnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #DDDDDD;
+    width: 21.6%;
+    padding-top: 5.2rem;
+    padding-right: 3.4rem;
+    padding-left: 6.9rem;
+    padding-bottom: 8.3rem;
+    border-bottom-left-radius: 50px;
+    transform: translateX(100%);
+    transition: .4s cubic-bezier(0.45, 0, 0.55, 1);
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 100vh;
+    }
+    .nav__container {
+        padding-top: 8rem;
+        @media screen and (max-width: 768px) {
+            width: 71%;
+            margin: auto;
+            
+            padding-top: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        ul.navigation {
+            li {
+                margin-bottom: 3rem;
+                transition: 0.8s ease;
+                transform: translateX(40px);
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 20px;
+                }
+                &:nth-child(1) {
+                    transition-delay: 0.1s;
+                }
+                &:nth-child(2) {
+                    transition-delay: 0.2s;
+                }
+                &:nth-child(3) {
+                    transition-delay: 0.3s;
+                }
+                &:nth-child(4) {
+                    transition-delay: 0.4s;
+                }
+                &:nth-child(5) {
+                    transition-delay: 0.5s;
+                }
+                a {
+                    color: #000;
+                    p {
+                        font-family: "Montserrat";
+                        font-size: clamp(28px, 2.364rem + 2.18vw, 4rem);
+                        font-weight: 500;
+                        &.flex {
+                            justify-content: flex-start;
+                            img {
+                                width: 8.6%;
+                                padding-left: 1.5rem;
+                            }
+                        }
+                    }
+                    span {
+                        font-size: clamp(12px, 1.055rem + 0.73vw, 1.6rem);
+                    }
+                    @media screen and (max-width: 768px) {
+                        p {
+                            font-size: 30px;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        ul.gnav__sns {
+            width: 38.6%;
+            padding-top: 2rem;
+            transition: 0.8s ease;
+            transform: translateX(40px);
+            transition-delay: 0.6s;
+            li {
+                img {
+                    width: 80%;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                width: 50%;
+                margin-bottom: 40px;
+            }
+        }
+        a.gnav__contact--btn {
+            width: 80%;
+            @include v.bg;
+            background-image: url(/images/common/gnav_common_bg.jpg);
+            border-radius: 20px;
+            display: block;
+            padding: 2.3rem 0 2rem 0;
+            color: #fff;
+            text-align: center;
+            margin-top: 5.6rem;
+            transition: 1.4s ease;
+            transform: translateX(40px);
+            transition-delay: 0.3s;
+            p {
+                font-family: "Montserrat";
+                font-size: clamp(28px, 2.364rem + 2.18vw, 4rem);
+            }
+            span {
+                font-size: clamp(12px, 1.018rem + 0.91vw, 1.7rem);
+            }
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                padding: 33px 0 29px 0;
+                p {
+                    font-size: 30px;
+                }
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    #gnav__toggle {
+        position: absolute;
+        top: 5rem;
+        right: 3.4rem;
+        cursor: pointer;
+        height: 30px;
+        @media screen and (max-width: 768px) {
+            top: 50px;
+            right: 35px;
+        }
+        div {
+            position: relative;
+            span {
+                width: 50px;
+                height: 2px;
+                background-color: #000;
+                transform: translateY(10px)rotate(25deg);
+                display: block;
+                &:nth-of-type(2) {
+                    transform: translateY(8px)rotate(-25deg);
+                }
+            }
+        }
+    }
+}
+.open {
+    #gnav {
+        transform: translateX(0%);
+        ul.navigation {
+            li {
+                transform: translateX(0);
+            }
+        }
+        ul.gnav__sns {
+            transform: translateX(0%);
+        }
+        a.gnav__contact--btn  {
+            transform: translateX(0%);
+        }
+    }
+}
+
+
+/*-------------------------
+    ローディング
+-------------------------*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 10;
+	transform: translate(-50%, -50%);
+}
+/*========= 画面遷移のためのCSS ===============*/
+
+body{
+    background:#fff;/*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+    background:#fff;/*画面を開いた後の背景色を指定*/
+}
+
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2{
+	display:block;
+}
+
+/*右に消えるエリア*/
+body.appear .splashbg1{
+	animation-name:PageAnime;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	left:50%;
+    transform: scaleX(1);
+    background-color: #fff;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+/*左に消えるエリア*/
+body.appear .splashbg2{
+	animation-name:PageAnime2;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	right:50%;
+    transform: scaleX(1);
+    background-color: #fff;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2{
+	0% {
+		transform-origin:right;
+		transform:scaleX(1);
+	}
+
+	50% {
+		transform-origin:left;
+	}
+	100% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+main,header,footer{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear main,
+body.appear header,
+body.appear footer{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .pc {
+        display: none!important;
+    }
+    .sp {
+        display: block!important;
+    }
+    .container {
+        min-width: 1px;
+        
+        width: 89.3%;
+    }
+    .order_1 {
+        order: 2;
+    }
+    .order_2 {
+        order: 1;
+    }
+    br.sp {
+        display: block;
+    }
+    a.common_btn {
+        margin: auto;
+    }
+    .smallest_container {
+        width: 89%;
+    }
+    .slick-next {
+        width: 30px;
+        height: 30px;
+        background-image: url(/images/common/point_next.svg)!important;
+        background-size: contain;
+    }
+    .slick-next:before {
+        content: "";
+        
+    }
+    .slick-prev {
+        width: 30px;
+        height: 30px;
+        background-image: url(/images/common/point_prev.svg)!important;
+        background-size: contain;
+    }
+    .slick-prev:before {
+        content: "";
+        
+    }
+}
+
+/*-------------------------
+    下層階ページ共通
+-------------------------*/
+
+.page__common {
+    width: 100%;
+    position: relative;
+    padding-top: 21rem;
+    padding-bottom: 19rem;
+    @media screen and (max-width: 768px) {
+        padding-top: 140px;
+        padding-bottom: 35px;
+    }
+    &::before {
+        content: "";
+        width: 2px;
+        height: 18rem;
+        background-color: #000;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+        position: absolute;
+        @media screen and (max-width: 768px) {
+            height: 120px;
+            width: 1px;
+        }
+    }
+    h1 {
+        text-align: center;
+        p {
+            font-size: clamp(49px, 4.136rem + 3.82vw, 7rem);
+            font-family: "Montserrat";
+            font-weight: 500;
+            @media screen and (max-width: 768px) {
+                font-size: 30px;
+            }
+        }
+        span {
+            display: block;
+            font-size: clamp(13px, 1.118rem + 0.91vw, 1.8rem);
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+/*-------------------------
+    footer
+-------------------------*/
+#footer {
+    padding-top: 10rem;
+    padding-bottom: 6.5rem;
+    @include v.bg;
+    background-image: url(/images/common/footer_bg.jpg);
+    a.footer__logo {
+        width: 17%;
+        display: block;
+        margin: auto;
+        img {
+            width: 100%;
+        }
+    }
+    ul {
+        width: 118px;
+        margin-top: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        li {
+            img {
+                width: 100%;
+            }
+            :nth-child(1) {
+                width: 22px;
+            }
+            :nth-child(2) {
+                width: 20px;
+            }
+            :nth-child(3) {
+                width: 26px;
+            }
+            :nth-child(4) {
+                width: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 110px;
+        padding-bottom: 60px;
+        background-image: url(/images/common/footer_bg_sp.jpg);
+        a.footer__logo {
+            width: 213px;
+            margin-bottom: 25px;
+        }
+        ul {
+            width: 150px;
+        }
+        small {
+            display: block;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+            margin-top: 50px
+        }
+    }
+}
