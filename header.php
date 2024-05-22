@@ -14,15 +14,13 @@
 		<link href="<?php echo get_template_directory_uri(); ?>/scss/slick-theme.css" rel="stylesheet" type="text/css">
 		<link href="<?php echo get_template_directory_uri(); ?>/scss/slick.css" rel="stylesheet" type="text/css">
 		<link rel="icon" href="/images/common/favicon.ico" id="favicon">
-		<link id="page-specific-stylesheet" rel="stylesheet" href="">
 
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 
-		<!-- JS -->
-		<script src="<?php echo get_template_directory_uri(); ?>/js/includes.js" defer></script> 
+
 
 		<script>
 			(function(d) {
@@ -36,7 +34,7 @@
 		</script>
 
 		
-
+			<?php wp_head();?>
 	</head>
 <body>
 	

@@ -59,3 +59,24 @@
         }
     }
 }
+
+
+a.back {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: clamp(17px, 0.09rem + 0.08vw, 0.15rem);
+    color: #000;
+    
+    .flex {
+        justify-content: center;
+        span {
+            margin-left: 2rem;
+        }
+        img {
+            width: 1.56%;
+            @media screen and (max-width: 768px) {
+                width: 30px;
+            }
+        }
+    }
+}

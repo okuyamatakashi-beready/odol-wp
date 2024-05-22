@@ -102,7 +102,7 @@ br.pc {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/images/common/header_contact-bg.jpg);
+  background-image: url(/wp-content/themes/odol-WP/images/common/header_contact-bg.jpg);
   width: 60%;
   padding: 2rem 0;
   color: #fff;
@@ -183,6 +183,7 @@ br.pc {
   right: 0;
   background-color: #DDDDDD;
   width: 21.6%;
+  z-index: 9999;
   padding-top: 5.2rem;
   padding-right: 3.4rem;
   padding-left: 6.9rem;
@@ -589,7 +590,7 @@ body.appear footer {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/images/common/footer_bg.jpg);
+  background-image: url(/wp-content/themes/odol-WP/images/common/footer_bg.jpg);
 }
 #footer a.footer__logo {
   width: 17%;

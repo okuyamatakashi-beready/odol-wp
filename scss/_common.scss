@@ -79,9 +79,10 @@ br.pc {
             }
             
         }
+
         a.header__toggle--contact {
             @include v.bg;
-            background-image: url(/images/common/header_contact-bg.jpg);
+            background-image: url(/wp-content/themes/odol-WP/images/common/header_contact-bg.jpg);
             width: 60%;
             padding: 2rem 0;
             color: #fff;
@@ -156,6 +157,7 @@ br.pc {
     right: 0;
     background-color: #DDDDDD;
     width: 21.6%;
+    z-index: 9999;
     padding-top: 5.2rem;
     padding-right: 3.4rem;
     padding-left: 6.9rem;
@@ -559,7 +561,7 @@ body.appear footer{
     padding-top: 10rem;
     padding-bottom: 6.5rem;
     @include v.bg;
-    background-image: url(/images/common/footer_bg.jpg);
+    background-image: url(/wp-content/themes/odol-WP/images/common/footer_bg.jpg);
     a.footer__logo {
         width: 17%;
         display: block;
