@@ -79,19 +79,19 @@
 		<div class="nav__container">
 			<ul class="navigation">
 				<li>
-					<a href="">
+					<a href="/project">
 						<p>PROJECT</p>
 						<span>オドルキカクがやってきたこと</span>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="/service">
 						<p>SERVICE</p>
 						<span>オドルキカクができること</span>
 					</a>
 				</li>
 				<li>
-					<a href="/company.html">
+					<a href="/company">
 						<p>COMPANY</p>
 						<span>オドルキカクについて</span>
 					</a>

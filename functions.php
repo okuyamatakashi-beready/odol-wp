@@ -14,6 +14,15 @@ function my_styles()  {
     if ( is_page('project') ) {
       wp_enqueue_style( 'project_css', get_template_directory_uri() . '/scss/project/index.css');
       }
+    if ( is_page('company') ) {
+      wp_enqueue_style( 'company_css', get_template_directory_uri() . '/scss/company/index.css');
+      }
+    if ( is_page('service') ) {
+      wp_enqueue_style( 'service_css', get_template_directory_uri() . '/scss/service/index.css');
+      }
+    if ( is_page('policy') ) {
+      wp_enqueue_style( 'policy_css', get_template_directory_uri() . '/scss/policy/index.css');
+      }
 
 
     }
